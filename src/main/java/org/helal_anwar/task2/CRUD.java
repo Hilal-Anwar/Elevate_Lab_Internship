@@ -22,14 +22,11 @@ public class CRUD {
     // Constructor: displays menu and starts the app
     private CRUD() throws IOException {
         String info = """
-                
                   ________  __  _____\s
                  / ___/ _ \\/ / / / _ \\
                 / /__/ , _/ /_/ / // /
                 \\___/_/|_|\\____/____/\s
-                
-                
-        (v.0.1)
+                                 (v.0.1)
         Welcome to crud app.
         Enter 1 - to add new student
         Enter 2 - to update student
