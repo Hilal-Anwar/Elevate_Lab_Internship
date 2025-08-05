@@ -22,11 +22,13 @@ public class CRUD {
     // Constructor: displays menu and starts the app
     private CRUD() throws IOException {
         String info = """
-        ________  __ _______ 
-       / ____/ / / / ____/ /
-      / /   / /_/ / __/ / / 
-     / /___/ __  / /___/ /___
-     \\____/_/ /_/_____/_____/
+                
+                  ________  __  _____\s
+                 / ___/ _ \\/ / / / _ \\
+                / /__/ , _/ /_/ / // /
+                \\___/_/|_|\\____/____/\s
+                
+                
         (v.0.1)
         Welcome to crud app.
         Enter 1 - to add new student
@@ -47,15 +49,15 @@ public class CRUD {
             int choice = Integer.parseInt(in.readLine());
 
             switch (choice) {
-                case 1 -> {
+                case 1:
                     System.out.println("Add a student");
                     System.out.println("Enter name of student");
                     String name = in.readLine();
                     System.out.println("Enter marks of student");
                     int marks = Integer.parseInt(in.readLine());
                     addStudent(name, marks);
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     System.out.println("Enter Id of student");
                     long id = Long.parseLong(in.readLine());
                     System.out.println("You can edit mark and name");
@@ -75,17 +77,18 @@ public class CRUD {
                             updateStudent(id, marks);
                         }
                     }
-                }
-                case 3 -> {
+                    break;
+                case 3:
                     System.out.println("Enter id of student");
                     long id = Long.parseLong(in.readLine());
                     removeStudent(id);
-                }
-                case 4 -> viewStudents();
-                case 5 -> {
+                    break;
+                case 4:
+                    viewStudents();
+                    break;
+                case 5:
                     System.out.println("Goodbye :)");
                     System.exit(0);
-                }
             }
         }
     }
